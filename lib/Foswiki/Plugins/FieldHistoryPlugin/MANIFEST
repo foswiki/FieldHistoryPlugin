@@ -1,0 +1,5 @@
+!noci
+data/System/FieldHistoryPlugin.txt 0644 Documentation page
+data/System/VarFIELDHISTORY.txt 0644 Tag documentation
+lib/Foswiki/Plugins/FieldHistoryPlugin.pm 0444 Perl module
+lib/Foswiki/Plugins/FieldHistoryPlugin/Config.spec 0444 Configuration

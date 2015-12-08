@@ -1,0 +1,32 @@
+%META:TOPICINFO{author="ProjectContributor" date="1434650530" format="1.1" version="1"}%
+%META:TOPICPARENT{name="Macros"}%
+---+ FIELDHISTORY -- record the history of a formfield inside the topic text
+
+The =%<nop>FIELDHISTORY%= variable is handled by the FieldHistoryPlugin
+
+---++ Parameters
+
+   | *Parameter* | *Description* | *Default* |
+   | ="..."= | Unnamed parameter is not used in this macro | |
+   | =field= | Name of a formfield used in the topic | '' |
+   | =format= | Format of status update added when the formfield named defined by field changes. Use the parameter tokens listed below | '' |
+
+
+---++ Parameter Tokens in <b> =format="..."= </b> parameter
+
+| *Name:* | *Expands To:* |
+| =$value= | The new value of the changed formfield. New lines in the formfield value are replace by an html break to preserve the viewed format of the formfield |
+| =$macro= | The FIELDHISTORY macro including all the parameters. |
+| =$date= | The current date in the format defined for the server |
+| =$time= | The current time in the format defined for the server |
+| =$wikiname= | The wikiname of the current user | 
+
+   * In addition you can use all the standard format tokens with the =format= parameter. See below.
+
+---+++ Standard Tokens for =format= parameter
+
+| *Name:* | *Expands To:* |
+%INCLUDE{"%SYSTEMWEB%.FormatTokens"}% 
+   
+%STOPINCLUDE%
+

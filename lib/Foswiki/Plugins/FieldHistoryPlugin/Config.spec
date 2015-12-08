@@ -1,0 +1,3 @@
+# ---+ Extensions
+# ---++ FieldHistoryPlugin
+1;

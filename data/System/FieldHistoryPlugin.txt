@@ -1,0 +1,53 @@
+%META:TOPICINFO{author="ProjectContributor" date="1449497695" format="1.1" version="1"}%
+%META:TOPICPARENT{name="Plugins"}%
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION% 
+-->
+---+!! FieldHistoryPlugin
+
+%SHORTDESCRIPTION%
+
+FieldHistoryPlugin is a plugin that enables recording the history of changes of a formfield within the same topic.
+
+Each time a page is saved, the plugin will compare the old and new value of the specified formfield. If the value has changed and it is not empty,
+the FIELDHISTORY macro will replace itself with the text specified in the format parameter.
+
+Normally you will include the value of the changed field ($value) and you will include the macro itself ($macro).
+
+By placing the $macro at the beginning of the format string, the history will be added on top of the existing history.
+If you place the $macro at the end of the format string, the history will be appended below the existing history.
+
+The macro also accepts $wikiname, $date, and $time in the format string as well as the normal %SYSTEMWEB%.FormatTokens like $n.
+
+Example which records the history of changes to a field called "Status".
+
+<verbatim>
+%FIELDHISTORY{field="Status" format="$n()---+++ Status update by $wikiname $date - $time$n()$value$n()$n()$macro"}%
+</verbatim>
+
+The idea of the plugin is to enable an easy way to enter regular status updates in a formfield, and recording the history of these status changes inside the topic itself.
+
+---++ Syntax Rules
+
+%INCLUDE{VarFIELDHISTORY}%
+
+---++ Installation
+
+%$INSTALL_INSTRUCTIONS% 
+
+---++ Plugin Info
+
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  1.0 (07 Dec 2015) | Initial release |
+|  Dependencies: | %$DEPENDENCIES% | 
+
+%META:FORM{name="PackageForm"}%
+%META:FIELD{name="Author" title="Author" value="KennethLavrsen"}%
+%META:FIELD{name="Version" title="Version" value="%$VERSION%"}%
+%META:FIELD{name="Release" title="Release" value="%$RELEASE%"}%
+%META:FIELD{name="Copyright" value="2015, KennethLavrsen, All Rights Reserved"}%
+%META:FIELD{name="License" value="GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]])"}%
+%META:FIELD{name="Repository" value="https://github.com/foswiki/%$ROOTMODULE%"}%
+%META:FIELD{name="Home" value="http://foswiki.org/Extensions/%$ROOTMODULE%"}%
+%META:FIELD{name="Support" value="http://foswiki.org/Support/%$ROOTMODULE%"}%

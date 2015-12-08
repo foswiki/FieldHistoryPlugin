@@ -1,0 +1,11 @@
+*,v
+*,pfv
+*.gz
+/FieldHistoryPlugin.md5
+/FieldHistoryPlugin.sha1
+/FieldHistoryPlugin.tgz
+/FieldHistoryPlugin.txt
+/FieldHistoryPlugin.zip
+/FieldHistoryPlugin_installer
+/FieldHistoryPlugin_installer.pl
+
